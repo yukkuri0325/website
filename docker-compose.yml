@@ -1,0 +1,25 @@
+version: '2'
+services:
+  web:
+    container_name: rails
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/sample
+    ports:
+      - '3000:3000'
+    environment:
+      RAILS_ENV: development
+      MYSQL_ROOT_PASSWORD: 'root'
+      DATABASE_URL: 'mysql2://root:root@db:3306'
+    depends_on:
+      - db
+
+  db:
+    container_name: maria
+    image: mariadb:10.0
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - '3306:3306'
+
