@@ -25,14 +25,13 @@ RUN apk update && \
 ##### Rails #####
 RUN gem install bundler
 
-RUN mkdir /sample
-WORKDIR /sample
+RUN mkdir /site
+WORKDIR /site
 COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
 RUN bundle install
 
-ADD . /sample
+ADD . /site
 
 EXPOSE 3000
 CMD ['rails', 'server', '-b', '0.0.0.0']
-
