@@ -1,14 +1,32 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Sample</title>
-    <%= csrf_meta_tags %>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Sample</title>
+      <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+
+    <body>
+      <div id="container">
+      <header>
+        sampleブログサイト
+        <div id="menu">
+        <ul>
+          <li><a href="#">ホーム</a></li>
+          <li><a href="#">記事一覧</a></li>
+          <li><a href="#">ギャラリー</a></li>
+        </ul>
+      </div>
+      </header>
+      <main>
+      <%= yield %>
+      </main>
+      <footer>
+        <div class="footertext">フッター</div>
+      </footer>
+    </div>
+    </body>
+  </html>
