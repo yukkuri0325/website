@@ -15,6 +15,7 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
 #container {
   background-color: #EAEAEA;
   width: auto;
@@ -56,4 +57,34 @@ h5 {
 h5 p {
     margin: 0;
     padding: 0;
+}
+
+#nav-wrap {
+  border-bottom:1px solid #bbb;
+  position: relative;
+  z-index: 101;
+  background-color: #fff;
+}
+#nav {
+  margin: 0 auto;
+  width: 960px;
+  position: relative;
+  font-family: RodinPro-B,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, sans-serif;
+}
+
+/* 親 */
+#nav > li > a{
+	font-family: RodinPro-B,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, sans-serif;
+	display: block;
+	white-space: nowrap;
+	color:#000;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	line-height: 36px;
+}
+
+#nav > li > a:hover{
+	background-color: #fff;
+	color: #009de1;
 }
